@@ -1,0 +1,159 @@
+<!DOCTYPE html> <!--HTML5의 사용하는 태그 읽기-->
+<html>
+    <head>
+        <!-- 자바스크립트 / CSS -->
+        <script type="text/javascript">
+            // 한줄 주석 = 자바 
+            /*
+               여러줄 주석 
+               JavaScript => ES6
+               1) 자바스크립트 사용 이유
+                  = HTML을 조작하거나 변경하기 위해 사용 
+                  = 웹페이지에서 적용 
+                  = 유효성 검사 
+                  = 서버에서 데이터를 읽어올때 
+                  = HTML(정적) => 실시간 변경(동적)
+               2) 브라우저 =====  데이터 (영구적으로 저장)
+                                         | 데이터베이스 (오라클)
+                        HTML/CSS
+                          | NodeJS 
+                  HTML ========= 오라클 
+                          X
+                       ===  | ===
+                          Java/C#/Python => 운영(CI/CD)
+                           |
+                        JavaScript
+                => 자바스크립트 사용법 
+                   1) 내부스크립트 : 한파일에서만 사용이 가능
+                      
+                   2) 외부스크립트 : 파일로 만들어져 있다 
+                                   .js : 여러개의 파일에서 동시에 사용
+                      <script src="URL|파일경로">
+                   3) 인라인스크립트 : 태그한개에서만 사용 
+                      <button onclick="">
+               1. 변수 
+                  var / let / const => 자동 지정 변수 
+                  number : 정수/실수 
+                  string : 문자 / 문자열 
+                  boolean : true/false 
+                  function : 함수 
+                  array : 배열 
+                  object : 객체 
+
+                  let a=10 a:number
+                  let b=10.5 a:number
+                  let c="abc" => string
+                  let d=[1,2,3,4,5] => array
+                  let e={name:"",age:20} => object
+
+                  --------------------------------
+                  let a=10
+                  a="abc"
+                  a=[1,2,3,4,5]
+                  a={name:"",age:10} : 가독성 (분석)
+
+                  let a:number=10 type=javascript변경
+
+                  let => 변수 (변경해서 사용이 가능)
+                  var => scope가 명확하지 않는다 
+                         ----- 사용범위 
+                  const : 변경이 불가능 (상수)
+                  
+                  변수 : 모든 프로그램언어에서는 반드시 사용
+                        데이터를 저장하는 공간 
+                        한개의 데이머만 저장이 가능 
+                        => 메모리 주소의 이름을 부여하는 것이다
+
+                        0======
+
+                        4======
+                           10  => 주소의 별칭 => 변수 a
+                        8======
+                            20  => b
+                        12======
+                  변수 => 저장 / 수정 
+                  변수의 특징 
+                  ---------
+                  1. 저장 => 데이터 한개 저장 
+                  2. 재사용 => 한개를 저장후에 필요시에 수정 
+                  3. 가독성 => 코드 이용시에 이해가 쉽다 
+                  => 계산기(사칙연산) 정수 연산자 정수 
+                  
+                  변수명 (식별자) 
+                  1. 알파벳으로 시작한다 (대소문자 구분)
+                  2. 숫자 사용이 가능 (앞에 사용 금지)
+                     a1 , a2... 1b(X)
+                  3. 키워드는 사용할 수 없다 
+                     let , var , const...
+                  4. 공백은 사용할 수 없다 
+                     a b
+                  5. 특수문자 사용이 가능 (_ $)
+                     _a : 임시변수 
+                     단어 혼합  file_name file_count
+                               fileName fileCount
+                  *** 변수는 소문자 시작을 기본
+                  변수 사용 이유 
+                  1. 반복되는 값을 간편하게 다룬다 
+                  2. 프로그램의 흐름에 따라 값이 변경되는 경우 
+                  3. 함수나 알고리즘에 입력값/결과값 저장 
+
+                  프로그램 : 데이터 관리 (제어)
+                  한개 : 변수 
+                  같은 것 여러개 : 배열 
+                  다른 것 여러개 : 객체 
+                  -------------------
+
+                  메모리 구조 
+                  자바 : 스택 / 힙 / 메소드 영역
+                  자바스크립트 : 스택 / 힙 
+                               변수   배열 / 객체 
+
+                  --------
+                     10 ==> a  a=10 => a=20
+                  --------
+
+                  --------    --------
+                                  10 ==> a(X) => GC
+                              --------
+                                  20 ==> a(O)
+                              --------
+
+                              --------
+                     
+
+               2. 연산자 
+               3. 제어문 
+               4. 함수 
+               5. 배열 
+               6. 객체 
+               7. 이벤트
+            */
+           window.onload=function(){
+              // 시작점 => main (자바)
+              // 변수 ES5 / ES6 ; 문장의 종료 => 명령어
+              let a=10
+              let b=10.5 
+              // number
+              let c='abc'
+              let d="abc"
+              // string
+              let e=true
+              // boolean
+              let f=[1,2,3,4,5]
+              // array
+              let g={name:"홍길동",sex:"남자"}
+              // object
+              document.write(a+":"+typeof a+"<br>")
+              document.write(b+":"+typeof b+"<br>")
+              document.write(c+":"+typeof c+"<br>")
+              document.write(d+":"+typeof d+"<br>")
+              document.write(e+":"+typeof e+"<br>")
+              document.write(f+":"+typeof f+"<br>")
+              document.write(g+":"+typeof f+"<br>")
+           }
+        </script>
+    </head>
+    <body>
+        <!--브라우저 출력-->
+    </body>
+</html>

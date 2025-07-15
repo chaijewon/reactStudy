@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script type="text/javascript">
+        window.onload=function(){
+            func()
+        }
+        function func(){
+            let arr=[1,2,3,4,5,6,7]
+            arr.map(num=>
+                document.write(num+"&nbsp;")
+            )
+            document.write("<br>")
+            arr.forEach(num=>
+                document.write(num+"&nbsp;")
+            )
+            document.write("<br>")
+            for(let i=0;i<arr.length;i++)
+            {
+                document.write(arr[i]+"&nbsp;")
+            }
+            document.write("<br>")
+            for(let num of arr)
+            {
+                document.write(num+"&nbsp;")
+            }
+            document.write("<br>")
+            for(let i in arr)
+            {
+                document.write(arr[i]+"&nbsp;")
+            }
+        }
+
+      </script>
+    </head>
+    <body>
+     
+    </body>
+</html>

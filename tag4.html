@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+   목록 출력 
+   <ul> <ol> <dl> <table>
+   <ul> : 순서없는 출력하는 목록 
+          = 사용처 : 메뉴 
+   형식)
+        <ul>
+          |
+        <li> => 출력할 목록내용   
+    <ol> : 순서있는 출력 
+          = 온라인 시험 
+          = 논문 => 목차 (eBook)
+    형식)
+          <ol>
+            |
+          <li> => 출력할 내용 
+    <dl> : datalist => 데이터 목록 출력 
+           사용처 : 상세보기 
+    형식) 
+            <dl>
+             |
+            <dt> : 제목
+            <dd> : 상세출력 
+    <table> : 동시에 여러개 출력 
+            사용처 : 게시판 , 회원 목록..
+            => ERP(관리) : 대부분이 table형식
+            => Vue => Vue3 / Vuex / Pinia
+                      ------------------- NuxtJs
+            => React => React 19 / Redux / TanStack-Query
+                        ---------------------------------- NextJS
+    형식)
+          <table>
+             |
+            <tr> => 한줄
+             |
+            ------
+            |    |
+           <th> <td> => 실제 데이터 첨부 
+      줄수 / 칸수 
+-->
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+       <h3>순서없는 목록</h3>
+       <ul>
+         <li>Java***</li>
+         <li>Oracle***</li>
+         <li>HTML/CSS/JavaScript***</li>
+         <li>JSP***</li>
+         <li>SpringFramework</li>
+         <li>SpringBoot***</li>
+         <li>MyBatis/JPA</li>
+         <li>VueJS***/ReactJS</li>
+         <li>우분투/DOCKER***</li>
+         <li>GIT / GITHUB</li>
+         <li>CI/CD</li>
+         <li>GitAction</li>
+         <li>Docker/DockerHub</li>
+         <li>Docker-Compose</li>
+         <li>Jenkins</li>
+         <li>쿠바네티스</li>
+         <li>AWS/ 클라우드***</li>
+         <li>NextJS(TanstackQuery,TypeScript)</li>
+       </ul>
+       <h3>순서있는 목록 출력</h3>
+       <ol>
+         <li>Java***</li>
+         <li>Oracle***</li>
+         <li>HTML/CSS/JavaScript***</li>
+         <li>JSP***</li>
+         <li>SpringFramework</li>
+         <li>SpringBoot***</li>
+         <li>MyBatis/JPA</li>
+         <li>VueJS***/ReactJS</li>
+         <li>우분투/DOCKER***</li>
+         <li>GIT / GITHUB</li>
+         <li>CI/CD</li>
+         <li>GitAction</li>
+         <li>Docker/DockerHub</li>
+         <li>Docker-Compose</li>
+         <li>Jenkins</li>
+         <li>쿠바네티스</li>
+         <li>AWS/ 클라우드***</li>
+         <li>NextJS(TanstackQuery,TypeScript)</li>
+       </ol>
+       <h3>상세 목록</h3>
+       <dl>
+         <dt>영화명</dt>
+         <dd>좀비딸</dd>
+         <dt>출연</dt>
+         <dd> 조정석, 이정은, 조여정, 윤경호, 최유리</dd>
+       </dl>
+       <h3>Table 목록</h3>
+       <table class="table table-hover">
+         <tr>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+         </tr>
+         <tr>
+            <td>홍길도</td>
+            <td>90</td>
+            <td>90</td>
+            <td>90</td>
+         </tr>
+       </table>
+    </body>
+</html>
