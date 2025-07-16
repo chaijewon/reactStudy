@@ -24,6 +24,19 @@ function App(props) {
      정수 useState(0)
      문자 useState('')
      배열 useState([])
+
+     => useEffect : 서버를 연결할때 사용 
+        --------- mounted 
+                    |
+                  처음 시작 => window.onload 
+     => router 
+         | 화면 변경 
+     --------------------- react 기초 
+     | Redux / TanStack-Query 
+                    | TypeScript 
+     | 개인 프로젝트 : 가산점 : 10%
+     | = react 가능자 65%
+     | = CI/CD => 우대 
   */
   const detail=(m)=>{
     //movie=m
@@ -89,7 +102,7 @@ function MovieDetail(props){
           <td width="55%">{props.movie.startDate}</td>
         </tr>
         <tr>
-          <th width="15%">장르</th>
+          <th width="15%">장르</th> 
           <td width="55%">{props.movie.genre}</td>
         </tr>
         <tr>
