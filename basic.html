@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script type="text/javascript">
+         const sawon=[
+            {sabun:1,name:"홍길동",dept:"개발부",job:"대리",pay:3500},
+            {sabun:2,name:"심청이",dept:"영업부",job:"사원",pay:3000},
+            {sabun:3,name:"박문수",dept:"기획부",job:"과장",pay:4200},
+            {sabun:4,name:"춘향이",dept:"자재부",job:"대리",pay:3500},
+            {sabun:5,name:"김두한",dept:"총무부",job:"사원",pay:3000}
+         ]
+         // for(Movie m:movie)
+         window.onload=function(){
+             s()
+             document.write("<ul>")
+             sawon.forEach(sa=>
+                document.write("<li>"+sa.name+"</li>")
+             )
+             document.write("</ul>")
+
+         }
+         const s=()=>{
+            document.write("<h1>사원 정보</h1>")
+         }
+      </script>
+    </head>
+    <body>
+
+    </body>
+</html>

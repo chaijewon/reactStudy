@@ -1,0 +1,219 @@
+<!DOCTYPE html> <!-- HTML5의 정의된 HTML태그 읽기-->
+<html> <!--HTML 문서 시작 -->
+  <head>
+    <!-- 설정 파일 : CSS / JavaScript(동적)-->
+    <!--
+       <meta> : 한글 설정 
+                ---- 한글자당 2byte => Unicode => UTF-8
+                ---- 숫자 / 알파벳 1byte => ASC
+       <title> : 브라우저에 제목 
+       ***<style> : 태그에 디자인 
+       ***<script> : 동적 처리 
+       <link> :  이미 만들어진 CSS 라이브러리 읽기 
+
+       화면 디자인 : 퍼블리셔 = HTML / CSS
+       **Front-End : JavaScript 
+                   ----------
+                   JQuery , Ajax , Vue , React ...
+       **Back-End : 프로그램 언어 
+                  Java / Python / Kotlin , Dart 
+                  -----  
+                  C/C++
+       데이터베이스 : Oracle , MySql , MariaDB : DBA
+       보안 : Spring-Security / JWT => 카카오 로그인 
+
+       1. JSP : 팀별 
+       2. Spring-Boot 
+          JSP / ThymeLeaf (권장)
+           |         |
+          Java      HTML
+       3. CI/CD 
+
+       자바스크립트 
+       ---------- react
+         1. 변수 : 한개의 데이터를 저장하는 메모리 주소의 이름 
+            => 자동 지정 변수 
+               ------------
+                var / let / const
+                            -- 상수 : 변경이 불가능
+                      -- 변수 : 변경이 가능 
+                --- 사용빈도가 없다 
+                    => 메모리 누수 (사용이 안되는 경우 메모리 해제)
+                예) 데이터타입 
+                    = number :  정수 , 실수
+                                 10,20... 10.5 , 1.5... 
+                    = string :  문자 , 문자열 
+                                'A' , "ABC"
+                    = boolean : true/false 
+                                 |     => 0, 0.0
+                                0,0.0이 아닌수
+                    = array : 데이터를 여러개 모아서 관리 
+                              [1,2,3,4,5....]
+                    *** 프로그램은 누가 잘 모아서 처리
+                    = object (객체) = 한개,한사람에 정보를 저장
+                        {sabun:1,name:"",dept:"",job:"",loc:""}
+                        [{},{},{},{}...]
+                    = function : 기능 처리 
+                    = undifined : 값이 없는 상태
+                      let a=10
+                      
+                    => 확인 : type 변수명 
+                    let a=10 = a:number ==> int
+                    let b=10.5 = b:number ==> double
+                    let c='abc' = c:string
+                    let d="abc" = d:string 
+                    let e=[]    = e:array
+                    let f={}    = f:object
+                    let func=function(){} = func:function
+                    let g=true = g:boolean
+                    ------------------------- kotlin
+                    
+                    연산자 
+                      산술 / 비교 / 삼항연산자 
+                      ---
+                      +(덧셈,문자열 결합) , %(나머지)
+                            ----------
+                            'A'+1 => 'A1'
+                            let a=10
+                            let b=10
+                            console.log('a='+a) => a=10
+                      7+1+"ABC"+7+1 
+                      ---
+                        8+"ABC" => "8ABC"+7 => "8ABC7"+1 "8ABC71"
+                      
+                      비교연산자 : 결과값 (true/false)
+                      8>9 false
+                      8<9 true
+                      9>=9 true 
+                      8==9 false
+                      8!=9 true 
+                      ---------------
+                      8=='8'
+                          string=> number변환 => true 
+                      number
+                      8==='8' => 데이터형 구분 
+                          string 
+                      number
+
+                      삼항연산자 
+                      조건 ? 값1 : 값2
+                      ---
+                       true => 값1
+                       false => 값2
+
+                 제어문 
+                   if 
+                   if~else      | false면 종료
+                         1  =>  2  <=  4
+                   for(초기값;조건식;증가식) -
+                   {           | true     |
+                             문장 3  -------
+                   }
+                   i++ : 한개 증가 
+                   i-- : 한개 감소 
+                   i+=2 : 2개증가 
+                   i+=3 
+                  for(let i=1;i<=10;i++)
+
+                  let arr=[1,2,3,4,5]
+                  arr.map(a=>
+                          |
+                        a=1 , a=2 , a=3, a=4 a=5
+                  )
+
+                  let arr=[{title:"a",rank:1},{title:"b",rank:2}...]
+                  arr.map(a=>
+                      a={title:"a"}
+                      a.title => a
+                      a.rank => 1
+                      a={title:"b"}
+                      a.title => b
+                      a.rank => 2
+                  )
+                  arr.forEach(a=>
+                      a={title:"a"}
+                      a.title => a
+                      a.rank => 1
+                      a={title:"b"}
+                      a.title => b
+                      a.rank => 2
+                  )
+
+                  => 화살표함수 : 람다
+                  함수 : 기능 처리 => 명령문의 집합 
+                  1. 선언적 함수 
+                  function App()
+                  {
+                     기능 
+                  }
+                  2.익명의 함수
+                  main => 시작점 
+                  window.onload=function()
+                  {
+                     
+                  } 
+                  const func=function()
+                  {
+                     
+                  }
+
+    -->
+    <script type="text/javascript">
+        
+        /*function func()
+        {
+            document.write("Hello JavaScript")
+        }*/
+        /*const func=function(){
+            document.write("Hello JavaScript")
+        }*/
+        const func=()=>{
+            document.write("Hello JavaScript")
+        }
+        window.onload=()=>
+        {
+            func()
+        }
+    </script>
+  </head>
+  <body>
+    <!--브라우저에 화면 보여주기 --> 
+    <!--
+         문자 관련 
+           <h1> , <h3> : 제목 
+           <br> : 줄바꿈 
+           <p> : 단락 
+           <pre> : 있는 그대로 출력 
+           <sup> : 위첨자 , <b> : bold => 강조  
+         링크 
+           <a> => <a href="URL">
+         멀티미디어 
+           <img> : 이미지 => <img src="이미지파일명">
+           <embed> : 동영상 => <embed src="동영상">
+         화면 분할 
+           <div> : 세로분할 / 가로분할 
+           <span> : 부분적으로 CSS적용 
+               => 부메뉴 
+         입력 
+           <input>
+              <input type="">
+                           |
+                        text : id , 이름 ...
+                        password : 비밀번호 
+                        file : 파일 업로드 
+                        date : 달력 
+                        number : 숫자 => spinner
+                        hidden : 비밀번호나 감추고 싶은 데이터
+                        button : 일반버튼 => 반드시 자바스크립트 이용
+                        ----------------------------------
+                        submit : 전송 (입력된 데이터를 전송)
+                        image : 버튼 (이미지) => submit
+                        ----------------------------------
+                          <button> : 전송 버튼 
+                        reset : 초기화 
+
+           <textarea> : 여러줄 입력 => 글쓰기 / 댓글 / 채팅
+           <select> : 콤보박스 
+    -->
+  </body>
+</html>
