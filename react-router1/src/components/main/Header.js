@@ -1,12 +1,13 @@
+import { NavLink } from "react-router-dom"
 function Header(){
    return (
       <nav class="navbar navbar-inverse">
        <div class="container-fluid">
          <div class="navbar-header">
-            <a class="navbar-brand" href="#">React-Router</a>
+            <NavLink class="navbar-brand" to="/">React-Router</NavLink>
          </div>
          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><NavLink to="/">Home</NavLink></li>
             <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">영화
             <span class="caret"></span></a>
@@ -17,7 +18,7 @@ function Header(){
             </ul>
             </li>
             <li><a href="#">TMDB</a></li>
-            <li><a href="#">동영상</a></li>
+            <li><NavLink to="/find">동영상</NavLink></li>
          </ul>
       </div>
       </nav>

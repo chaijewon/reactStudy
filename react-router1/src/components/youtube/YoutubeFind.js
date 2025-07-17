@@ -1,8 +1,64 @@
+import { useState,useEffect,useRef,Fragment } from "react";
+import axios from 'axios'
+// 서버 연결 => ajax 
+/*
+    서버 : JSP / Servlet
+    데이터베이스 : Oracle => MyBatis 
+    Front : Jquery , Ajax 
+    ---------------------- 1차 프로젝트
+    서버 : Spring/Spring-Boot
+    데이터베이스 : Oracle => MyBatis
+    Front : VueJS 
+    ---------------------- 2차 프로젝트
+    서버 : Spring-Boot
+    데이터베이스 : MySql => JPA
+    Front : React
+    ----------------------- 개인 프로젝트 
+    CI/CD
+*/
+/*
+    componentWillMount() : HTML을 메모리에 저장하기 전 상태
+        => 서버에서 데이터 읽기 
+    componentDidMount() : HTML을 메모리에 저장된 상태 
+    componentWillUpdate() : HTML에 있는 데이터 수정 전 
+    componentDidUpdate() : HTML에 있는 데이터 수정 완료 
+    ----------------- class형 
+    => function형으로 변경 
+       => 16버전 
+    
+    => useEffect()
+       => mount / update 동시에 수행 
+       => useEffect호출 
+          useState변수 => setXxx
+       => useXxx : Hooks 
+    => useRef : 입력창을 제어할때 사용 
+       <input type="text">
+       -------------------
+
+*/
+// HTML(X) => XML => jsx 
+// 임시태그 : Fragment , Empty 태그 : <> </>
 function YoutubeFind(){
    return (
-     <div className="row">
-        <h1 className="text-center">YoutubeFind</h1>
-     </div>
+      <Fragment>
+      <div className="row">
+         <h1 className="text-center">Youtube 동영상 검색</h1>
+      </div>
+      <div className="row">
+         <input type="text" size={"30"} className="input-sm"/>
+         <button className="btn-sm btn-primary">검색</button>
+         {/*
+              return에서 사용하는 주석 
+              크기 : btn-sm btn-lg btn-xs
+              btn-primary : 파랑색
+              btn-success : 그린 
+              btn-danger : 빨간색 
+              btn-warning : 주황색
+              btn-info : 하늘색
+              btn-default  : 회색
+         */}
+      </div>
+     </Fragment>
    )
 }
 export default YoutubeFind;
