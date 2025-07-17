@@ -57,12 +57,24 @@ function YoutubeFind(){
              console.log(response.data.items)
              setMovie(response.data.items)
            })
-   },[])
+   },[fd]) //[] 한번만 수행 => [값] =>  
    /*
        movie=[{},{},{}...]
        movie.map(m=>
        )
    */
+   // 이벤트 함수 
+   const dataChange=()=>{
+      if(fd==="")
+      {
+         fdRef.current?.focus()
+         return 
+      }
+      if(fdRef.current)// 값이 입력된 상태
+      {
+         setFd(fdRef.current?.value)
+      }
+   }
    return (
       <Fragment>
       <div className="row">
@@ -70,7 +82,7 @@ function YoutubeFind(){
       </div>
       <div className="row">
          <input type="text" size={"30"} className="input-sm" ref={fdRef}/>
-         <button className="btn-sm btn-primary">검색</button>
+         <button className="btn-sm btn-primary" onClick={dataChange}>검색</button>
          {/*
               return에서 사용하는 주석 
               크기 : btn-sm btn-lg btn-xs

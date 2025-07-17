@@ -1,7 +1,28 @@
+import axios from "axios";
+import { useState,useEffect } from "react";
 function Home(){
+   const [movie,setMovie]=useState([])
+   useEffect(()=>{
+     axios.get('https://api.themoviedb.org/3/movie/popular?api_key=697729d3f274ce88cf5729d38280fd33')
+          .then(response=>{
+             console.log(response.data.results)
+             setMovie(response.data.results)
+          })
+   },[])
    return (
      <div className="row">
-        <h1 className="text-center">Home</h1>
+        {
+          movie.map(m=>
+            <div class="col-md-3">
+               <div class="thumbnail">
+                  <img src={"https://image.tmdb.org/t/p/w500"+m.poster_path} style={{"width":"230px","height":"250px"}}/>
+                  <div class="caption">
+                     <p>{m.title}</p>
+                  </div>
+               </div>
+            </div>
+          )
+        }
      </div>
    )
 }
