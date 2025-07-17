@@ -39,13 +39,37 @@ import axios from 'axios'
 // HTML(X) => XML => jsx 
 // 임시태그 : Fragment , Empty 태그 : <> </>
 function YoutubeFind(){
+   // 데이터 관리 => 검색어 변경시마다 re-render 
+   const [movie,setMovie]=useState([])
+   // movie=[] => 상수 
+   // {} => 한개 정보 
+   // 문자열 => "" , ''
+   // 정수 => 0
+   const [fd, setFd]=useState('아이브')
+   const fdRef=useRef(null)
+   // 검색어를 받아서 데이터 전송
+   // => CallBack => 시스템에 의해 자동 호출 
+   useEffect(()=>{
+      // 데이터를 youtube서버로부터 가지고 온다 
+      axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=28&q=${fd}&type=video&key=AIzaSyCjkIwifNo8t4OGYoxVIyUAoATzIFjEK34`)
+           .then(response=>{
+             // youtube로부터 데이터를 읽어 온다 
+             console.log(response.data.items)
+             setMovie(response.data.items)
+           })
+   },[])
+   /*
+       movie=[{},{},{}...]
+       movie.map(m=>
+       )
+   */
    return (
       <Fragment>
       <div className="row">
          <h1 className="text-center">Youtube 동영상 검색</h1>
       </div>
       <div className="row">
-         <input type="text" size={"30"} className="input-sm"/>
+         <input type="text" size={"30"} className="input-sm" ref={fdRef}/>
          <button className="btn-sm btn-primary">검색</button>
          {/*
               return에서 사용하는 주석 
@@ -57,6 +81,20 @@ function YoutubeFind(){
               btn-info : 하늘색
               btn-default  : 회색
          */}
+      </div>
+      <div className="row" style={{"marginTop":"10px"}}>
+         {
+            movie.map(m=>
+               <div class="col-md-3">
+                  <div class="thumbnail">
+                     <embed src={"http://youtube.com/embed/"+m.id.videoId} style={{"width":"230px","height":"300px"}}></embed>
+                     <div class="caption">
+                        <p>{m.snippet.title}</p>
+                     </div>
+                  </div>
+               </div>
+            )
+         }
       </div>
      </Fragment>
    )
