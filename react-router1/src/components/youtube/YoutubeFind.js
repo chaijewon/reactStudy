@@ -61,6 +61,7 @@ function YoutubeFind(){
    /*
        movie=[{},{},{}...]
        movie.map(m=>
+         
        )
    */
    // 이벤트 함수 

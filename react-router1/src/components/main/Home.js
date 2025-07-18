@@ -15,10 +15,12 @@ function Home(){
           movie.map(m=>
             <div class="col-md-3">
                <div class="thumbnail">
-                  <img src={"https://image.tmdb.org/t/p/w500"+m.poster_path} style={{"width":"230px","height":"250px"}}/>
-                  <div class="caption">
-                     <p>{m.title}</p>
-                  </div>
+                  <a href={"https://www.themoviedb.org/movie/"+m.id} target="_blank">
+                     <img src={"https://image.tmdb.org/t/p/w500"+m.poster_path} style={{"width":"230px","height":"250px"}}/>
+                     <div class="caption">
+                        <p>{m.title}</p>
+                     </div>
+                  </a>
                </div>
             </div>
           )

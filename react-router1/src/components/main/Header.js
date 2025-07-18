@@ -19,6 +19,7 @@ function Header(){
             </li>
             <li><a href="#">TMDB</a></li>
             <li><NavLink to="/find">동영상</NavLink></li>
+            <li><NavLink to="/music">지니뮤직</NavLink></li>
          </ul>
       </div>
       </nav>
