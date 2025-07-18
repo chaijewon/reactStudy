@@ -23,8 +23,15 @@ function Home(){
               setFood(response.data.items.slice((curpage*12)-12,curpage*12))
            })
     },[curpage])
-
+    // 버튼 클릭시 처리 
+    const prev=()=>{
+       setCurpage(curpage>1?curpage-1:curpage)
+    }
+    const next=()=>{
+       setCurpage(curpage<totalpage?curpage+1:curpage)
+    }
     return (
+        <Fragment>
         <div className="row">
             {
                 food.map(f=> 
@@ -41,6 +48,12 @@ function Home(){
                 )
             }
         </div>
+        <div className="row text-center" style={{"marginTop":"10px"}}>
+           <button className="btn-sm btn-info" onClick={prev}>이전</button>
+            {curpage} page / {totalpage} pages
+           <button className="btn-sm btn-warning" onClick={next}>다음</button>
+        </div>
+        </Fragment>
     )
 }
 // 등록 
